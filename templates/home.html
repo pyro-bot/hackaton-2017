@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block js %}
+{% endblock %}
+
+
+{% block main %}
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form form-group">
+                <form action="/image" method="post" enctype="multipart/form-data">
+                    <div class="form-control">
+                        <label for="image"> Выберите файл для распознования:</label>
+                        <input class="form-control" type="file" name="image" id="image">                            
+                    </div>
+                    <div class="form-control">
+                        <label for="contour_level">Чувствительность</label>
+                        <input type="text" name="contour_level" id="contour_level">        
+                    </div>
+                    <div class="form-control">
+                        <input class="btn btn-primary" type="submit" value="Отправить">                            
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</div>
+{% endblock %}
